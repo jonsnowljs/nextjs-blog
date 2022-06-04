@@ -3,7 +3,7 @@ import { getAllPostIds, getPostData } from '../../lib/posts';
 import Head from 'next/head';
 import Date from '../../components/date';
 import utilStyles from '../../styles/utils.module.css';
-import { GetStaticProps, GetStaticPaths } from 'next';
+import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next';
 
 export default function Post({
   postData,
@@ -46,3 +46,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     },
   };
 };
+
+export const getServerSideProps: GetServerSideProps = async ({params, res}) => {
+
+}
